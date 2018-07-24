@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>产品详情</title>
+
+    <link rel="shortcut icon" href="sd_favicon.ico">
+    <link rel="stylesheet" href="../lib/bootstrap4.0/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html,body{
+            background-color: #fff;
+        }
+        .pd-banner{
+            position: relative;
+        }
+        .pd-banner img{
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+        .pd-word{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            transform: translate(-50%,-50%);
+            margin-top: -30px;
+        }
+        .pd-word h3{
+            margin-bottom: 20px;
+            font-size: 42px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .pd-word p{
+            font-size: 20px;
+            font-weight: normal;
+            color: #fff;
+        }
+        .pd-tit{
+            position: relative;
+            width: 1200px;
+            margin: auto;
+            padding-top: 45px;
+            padding-left: 30px;
+            color: #333;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        .pd-tit:before{
+            position: absolute;
+            content: '';
+            top: 50px;
+            left: 0;
+            width: 1px;
+            height: 25px;
+            background-color: #108cee;
+        }
+        .pd-architecture{
+            padding-top: 50px;
+            text-align: center;
+        }
+        .pd-architecture img{
+            width: 1380px;
+            height: auto;
+        }
+        .pd-desc{
+            width: 1200px;
+            margin: auto;
+        }
+        .pd-desc h6{
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #333;
+        }
+        .pd-desc p{
+            line-height: 28px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }
+        .pd-platforms{
+            width: 1200px;
+            margin: 60px auto 100px;
+        }
+        .pl-item{
+            position: relative;
+            float: left;
+            width: 240px;
+            height: 320px;
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+        .pl-item:before{
+            position: absolute;
+            content: '';
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.6);
+        }
+        .pl-item>img{
+            float: left;
+        }
+        .pl-info{
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            color: #fff;
+            text-align: center;
+            font-weight: normal;
+
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+        .pl-info h3{
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        .pl-info p{
+            visibility: hidden;
+            padding: 0 15px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .pl-item:hover:before{
+            background-color: rgba(16,140,238,.8);
+        }
+        .pl-item:hover{
+            position: relative;
+            z-index: 9;
+            transform: scale(1.085);
+        }
+        .pl-item:hover .pl-info{
+            top:0;
+        }
+        .pl-item:hover .pl-info p{
+            visibility: visible;
+        }
+        .pl-item:hover .pl-info img{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--nav start-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark sd-nav-bg">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/logo.png" alt="logo" width="149" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        产品
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="sd_pro">
+                        <a class="dropdown-item" href="product-details.html">采集系统</a>
+                        <a class="dropdown-item" href="product-details.html">分析系统</a>
+                        <a class="dropdown-item" href="product-details.html">处理系统</a>
+                        <a class="dropdown-item" href="product-details.html">展示系统</a>
+                        <a class="dropdown-item" href="product-details.html">运维系统</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        解决方案
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="sd_solution">
+                        <a class="dropdown-item" href="solution/electricity.html">电力</a>
+                        <a class="dropdown-item" href="solution/water.html">水务环保</a>
+                        <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
+                        <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
+                        <a class="dropdown-item" href="solution/other.html">其他</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="case-details.html">案例</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-sd.html">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="business-cooperation.html">商务合作</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html">登录数道数据平台</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--nav end-->
+
+<div class="pd-banner clearfix">
+    <img src="../img/pd-banner.png" alt="img">
+    <div class="pd-word">
+        <h3>大数据应用服务系统</h3>
+        <p>针对用户痛点提供定制化的服务支撑，用数据分析提高效率</p>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="pd-tit">大数据应用服务系统基本架构 </div>
+    <div class="pd-architecture">
+        <img src="../img/pd-diagram.png" alt="img">
+    </div>
+    <div class="pd-desc">
+        <h6>大数据应用服务系统</h6>
+        <p>数道大数据平台覆盖了企业从数据采集到数据存储，再到分析处理，最后到业务应用的全流程环节。基于您企业当前迫切的业务需求和数据现状，数道大数据平台将针对性地为您提供最合适的服务支撑。</br>
+            无论您是零基础，正准备从设备/PLC进行数据采集，然后开始对设备进行远程管控，还是已经完成了采集和存储，需要进一步针对设备进行故障诊断，生产调度（基于设备的产能和当前的健康状况）或预测性运维等等更深一层的分析和应用，数道大数据平台都能帮助您快速、便捷地实现“一站式”的部署与应用，让您“轻松上手”，在短时间内就直观感受到对业务的帮助和提升。</p>
+    </div>
+    <div class="pd-tit">大数据应用服务平台包含平台</div>
+    <div class="pd-platforms clearfix">
+        <div class="pl-item clearfix">
+            <img src="../img/platform1.png" alt="img">
+            <div class="pl-info">
+                <img src="../img/pl-icon1.png" alt="icon">
+                <h3>数据获取</h3>
+                <p>通过数据采集板卡，或嵌入式系统
+                    采集SDK程序包采集设备数据，也
+                    可通过数据库连接工具，从企业数
+                    据库中，直接获取数据。</p>
+            </div>
+        </div>
+        <div class="pl-item clearfix">
+            <img src="../img/platform2.png" alt="img">
+            <div class="pl-info">
+                <img src="../img/pl-icon2.png" alt="icon">
+                <h3>数据准备</h3>
+                <p>对原始数据进行加工处理，去除脏
+                    数据，填补缺失，进行数据间的关
+                    联汇总，衍生更多数据变量，为数
+                    据分析提供支撑。</p>
+            </div>
+        </div>
+        <div class="pl-item clearfix">
+            <img src="../img/platform3.png" alt="img">
+            <div class="pl-info">
+                <img src="../img/pl-icon3.png" alt="icon">
+                <h3>数据分析</h3>
+                <p>应用统计方法或数据可视化技术，
+                    对当前获取的数据结合业务进行分
+                    析。</p>
+            </div>
+        </div>
+        <div class="pl-item clearfix">
+            <img src="../img/platform4.png" alt="img">
+            <div class="pl-info">
+                <img src="../img/pl-icon4.png" alt="icon">
+                <h3>机器学习</h3>
+                <p>通过大数据样本及机器学习模型算
+                    法，建立有监督或无监督的学习模
+                    型，从数据中有目的的寻找预测或
+                    估算的量化方法，并通过其他数据
+                    验证预测准确性。</p>
+            </div>
+        </div>
+        <div class="pl-item clearfix">
+            <img src="../img/platform5.png" alt="img">
+            <div class="pl-info">
+                <img src="../img/pl-icon5.png" alt="icon">
+                <h3>决策辅助</h3>
+                <p>在业务场景中，通过数据的融入，
+                    增加智能的预测或评估模型，在
+                    传统人工做出判断的基础上，给
+                    出跟多模型的分析结果作为参考
+                    和依据，优化原有的决策方法</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer start-->
+<div class="container-fluid" id="footer">
+    <footer>
+        <div class="row no-gutters">
+            <div class="float-left sd-news" style="width: 360px;">
+                <h6>新闻</h6>
+                <ul>
+                    <li>
+                        <a href="#">[2018-06-29] 万事达卡再次获区块链专利万事达卡再次获区块链专利...</a>
+                    </li>
+                    <li>
+                        <a href="#">[2018-06-29] 著名分析师 Benedict Evan...</a>
+                    </li>
+                    <li>
+                        <a href="#">[2018-06-29] ERC-20以太坊代币标准或...</a>
+                    </li>
+                    <li>
+                        <a href="#">[2018-06-08] 2018年云栖大会-上海峰会...</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="float-left" style="width: 180px;">
+                <div>
+                    <h6>支持与服务</h6>
+                    <ul>
+                        <li>
+                            <a href="#">运维管理</a>
+                        </li>
+                        <li>
+                            <a href="#">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="#">隐私声明</a>
+                        </li>
+                        <li>
+                            <a href="#">帮助文档</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-left" style="width: 180px;">
+                <div>
+                    <h6>产品与管理</h6>
+                    <ul>
+                        <li>
+                            <a href="#">解决方案</a>
+                        </li>
+                        <li>
+                            <a href="#">产品概述</a>
+                        </li>
+                        <li>
+                            <a href="#">产品文档</a>
+                        </li>
+                        <li>
+                            <a href="#">开发者资源</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-left" style="width: 330px;">
+                <div>
+                    <h6>合作与交流</h6>
+                    <ul>
+                        <li>
+                            <a href="#">技术资讯（support@haoshudao.com）</a>
+                        </li>
+                        <li>
+                            <a href="#">商务合作（sales@haoshudao.com）</a>
+                        </li>
+                        <li>
+                            <a href="#">投诉反馈（service@haoshudao.com）</a>
+                        </li>
+                        <li>
+                            <a href="#">微信公众号（haoshudao）</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="float-left">
+                <div class="contact-phone">
+                    <h5>021-20608029</h5>
+                    <p>24小时客服电话</p>
+                    <div>
+                        <a href="#">
+                            <img src="../img/QR-code.png" alt="img" class="QR-code">
+                            <img src="../img/wechart.png" alt="img">
+                        </a>
+                        <a href="#">
+                            <img src="../img/QR-code.png" alt="img" class="QR-code">
+                            <img src="../img/iphone.png" alt="img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters sd-links">
+            <p>友情链接：</p>
+            <a href="#">东方有线</a>
+            <a href="#">上海漕泾热电有限责任公司</a>
+            <a href="#">工业互联网创新中心</a>
+            <a href="#">安亭·上海国际汽车城</a>
+            <a href="#">中国工业新闻网</a>
+            <a href="#">工业互联网产业联盟</a>
+        </div>
+        <div class="copy-right">
+            Copyright ©2018 All Rights Reserved. 数道 版权所有
+        </div>
+    </footer>
+</div>
+<!--footer end-->
+
+<script rel="script" src="../lib/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
+</body>
+</html>
