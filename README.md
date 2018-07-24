@@ -1,2 +1,2 @@
 # sd-website
-# ???https://doulu.github.io/sd-website/
+# https://doulu.github.io/sd-website/
