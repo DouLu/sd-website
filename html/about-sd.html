@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,shrink-to-fit=no">
     <title>关于我们</title>
 
     <link rel="shortcut icon" href="sd_favicon.ico">
@@ -17,7 +17,7 @@
         .particle-effect{
             position: relative;
             height: 380px;
-            background: url(../img/lizi-bg.png) no-repeat center/cover;
+            /*background: url(../img/lizi-bg.png) no-repeat center/cover;*/
         }
         #threeJS{
             position: absolute;
@@ -50,7 +50,7 @@
             content: '';
             top: 2px;
             left: 0;
-            width: 1px;
+            width: 2px;
             height: 22px;
             background-color: #108cee;
         }
@@ -108,15 +108,69 @@
             color: #fff;
             border-radius: 0;
         }
-        .sd-map a{
-            display: block;
-            padding-left: 30px;
-            overflow: hidden;
+        #sd_address{
+            width: 1170px;
+            height: 340px;
+            margin-left: 30px;
         }
-        .sd-map a img{
-            width: 100%;
-            height: auto;
-            float: left;
+        @media screen and (max-width: 576px){
+            html,body{
+                min-width: auto;
+            }
+            .particle-effect{
+                height: 190px;
+            }
+            .pe-word{
+                width: auto;
+                height: 47px;
+                margin: 0;
+            }
+            .about-sd {
+                width: auto;
+                padding: 30px 15px 40px;
+            }
+            .ab-tit{
+                width: auto;
+                padding-left: 15px;
+                font-size: 14px;
+            }
+            .ab-tit:before {
+                top: 0;
+                height: 15px;
+            }
+            .sd-profile {
+                padding: 10px 40px 15px 15px;
+                font-size: 12px;
+            }
+            .sd-profile p{
+                margin-bottom: 10px;
+            }
+            .development-path{
+                padding-bottom: 15px;
+            }
+            .development-path img{
+                width: 100%;
+                height: auto;
+            }
+            .pc-form{
+                display: none;
+            }
+            .contact-us {
+                padding: 20px 0 15px 15px;
+            }
+            .contact-us h6 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .contact-us p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            #sd_address {
+                width: 100%;
+                height: 170px;
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -130,54 +184,58 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        产品
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_pro">
-                        <a class="dropdown-item" href="product-details.html">采集系统</a>
-                        <a class="dropdown-item" href="product-details.html">分析系统</a>
-                        <a class="dropdown-item" href="product-details.html">处理系统</a>
-                        <a class="dropdown-item" href="product-details.html">展示系统</a>
-                        <a class="dropdown-item" href="product-details.html">运维系统</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        解决方案
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_solution">
-                        <a class="dropdown-item" href="solution/electricity.html">电力</a>
-                        <a class="dropdown-item" href="solution/water.html">水务环保</a>
-                        <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
-                        <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
-                        <a class="dropdown-item" href="solution/other.html">其他</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="case-details.html">案例</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about-sd.html">关于我们</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business-cooperation.html">商务合作</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="404.html">登录数道数据平台</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            产品
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_pro">
+                            <a class="dropdown-item" href="product-details.html">采集系统</a>
+                            <a class="dropdown-item" href="product-details.html">分析系统</a>
+                            <a class="dropdown-item" href="product-details.html">处理系统</a>
+                            <a class="dropdown-item" href="product-details.html">展示系统</a>
+                            <a class="dropdown-item" href="product-details.html">运维系统</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            解决方案
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_solution">
+                            <a class="dropdown-item" href="solution/electricity.html">电力</a>
+                            <a class="dropdown-item" href="solution/water.html">水务环保</a>
+                            <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
+                            <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
+                            <a class="dropdown-item" href="solution/other.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-details.html">案例</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about-sd.html">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business-cooperation.html">商务合作</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="404.html">登录数道数据平台</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
 <!--nav end-->
 
 <!--粒子效果-->
-<div class="particle-effect">
-    <div id="threeJS"></div>
-    <img class="pe-word" src="../img/bg-word.png" alt="img">
+<div class="particle-effect" style="overflow: hidden">
+    <div id="WebGL-output" style="position: relative;top: -100px;"></div>
+    <!--<div id="threeJS"></div>-->
+    <img class="pe-word pc-img" src="../img/bg-word.png" alt="img">
+    <img class="pe-word mobile-img" src="../img/bg-word.png" alt="img">
 </div>
 
 <div class="about-sd">
@@ -190,18 +248,19 @@
     </div>
     <h3 class="ab-tit">发展历程</h3>
     <div class="development-path">
-        <img src="../img/development-path.png" alt="数道发展历程展示图">
+        <img class="pc-img" src="../img/development-path.png" alt="数道发展历程展示图">
+        <img class="mobile-img" src="../img/sm-development-path.png" alt="数道发展历程展示图">
     </div>
     <h3 class="ab-tit">联系我们</h3>
     <div class="row no-gutters contact-us">
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
             <h6>如何找到我们</h6>
             <p class="mb-3">如果您有任何问题，只需填写联系方式，我们会很快联系您。</p>
             <p class="mb-2">公司地址：上海市浦东新区张江高科海科路99号</p>
             <p class="mb-2">联系电话：021-20608029</p>
             <p>邮箱：shudao@haoshudao.com</p>
         </div>
-        <div class="col-md-6">
+        <div class="pc-form col-md-6">
             <h6>留言</h6>
             <form class="leave-message" action="" method="">
                 <div class="form-row">
@@ -236,9 +295,7 @@
         </div>
     </div>
     <div class="sd-map">
-        <a href="https://j.map.baidu.com/3jz-O" target="_blank">
-            <img src="../img/map.png" alt="map">
-        </a>
+        <div id="sd_address"></div>
     </div>
 </div>
 
@@ -352,13 +409,26 @@
     </footer>
 </div>
 <!--footer end-->
-
+<!--mobile footer-->
+<div class="container-fluid" id="mobile_footer">
+    <div>
+        <p>联系邮箱：haoshudao@haoshuodao.com</p>
+        <p>Copyright ©2018 All Rights Reserved. 数道 版权所有 </p>
+    </div>
+</div>
+<!--mobile footer-->
 <script rel="script" src="../lib/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
-<script rel="script" src="../lib/three.min.js"></script>
+<!--<script rel="script" src="../lib/three.min.js"></script>-->
+<script type="text/javascript" src="../test/three.min.js"></script>
+<script type="text/javascript" src="../test/dat.gui.min.js"></script>
+<script type="text/javascript" src="../test/Stats.min.js"></script>
+<script type="text/javascript" src="../test/index.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XPbAwGz8BIuM00Pcr6iSPMugBvC5COUz"></script>
+<script rel="script" src="../navbar.js"></script>
 <!--粒子背景-->
-<script rel="script">
+<!--<script rel="script">
     /*粒子背景效果*/
     var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
     var container = document.getElementById('threeJS');
@@ -465,6 +535,21 @@
         renderer.render( scene, camera );
         count += 0.1;
     }
+</script>-->
+
+<!--百度 map api-->
+<script rel="script">
+    var map = new BMap.Map("sd_address");
+    var point = new BMap.Point(121.595773,31.187194);
+    map.centerAndZoom(point, 17);
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+    var marker = new BMap.Marker(point);        // 创建标注
+    map.addOverlay(marker);                     // 将标注添加到地图中
+
+    marker.addEventListener("click", function(){
+        window.location.href = 'https://j.map.baidu.com/3jz-O';
+    });
 </script>
 </body>
 </html>

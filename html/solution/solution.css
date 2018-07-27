@@ -47,7 +47,7 @@ html,body{
     content: '';
     top: 2px;
     left: 0;
-    width: 1px;
+    width: 2px;
     height: 18px;
     background-color: #108cee;
 }
@@ -75,7 +75,7 @@ html,body{
     color: #333;
 }
 .media-body p{
-    height: 75px;
+    max-height: 75px;
     overflow-y: hidden;
     line-height: 25px;
     font-size: 14px;
@@ -100,4 +100,66 @@ html,body{
     text-decoration: none;
     background-color: #108cee;
     border-color: #108cee;
+}
+.sm-applicable-scene{
+    display: none;
+}
+@media screen and (max-width: 576px){
+    html,body{
+        min-width: auto;
+    }
+    .sol-banner{
+        display: none;
+    }
+    .sol-content {
+        width: auto;
+        padding: 25px 15px 30px;
+    }
+    .sol-tit {
+        margin-bottom: 15px;
+        padding-left: 8px;
+        font-size: 14px;
+    }
+    .sol-tit:before {
+        height: 13px;
+    }
+    .applicable-scene{
+        display: none;
+    }
+    .sm-applicable-scene{
+        display: block;
+    }
+    .sm-applicable-scene img{
+        width: 100%;
+        height: auto;
+    }
+    .sm-applicable-scene p{
+        font-size: 12px;
+        padding-top: 10px;
+        max-height: 84px;
+        overflow-y: hidden;
+    }
+    .applications .media {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 10px 15px;
+    }
+    .applications .media img{
+        width: 60px;
+        height: auto;
+    }
+    .media-body h5{
+        font-size: 14px;
+    }
+    .media-body p{
+        line-height: 18px;
+        max-height: 55px;
+        font-size: 12px;
+    }
+    .mr-30{
+        margin-right: 15px;
+    }
+    .mb-15{
+        margin-bottom: 10px;
+    }
 }

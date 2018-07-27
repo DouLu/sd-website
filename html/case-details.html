@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,shrink-to-fit=no">
     <title>案例详情</title>
 
     <link rel="shortcut icon" href="sd_favicon.ico">
@@ -32,6 +32,10 @@
         .c-logo{
             padding-bottom: 40px;
             text-align: center;
+        }
+        .c-logo img{
+            width: auto;
+            height: 64px;
         }
         .c-pro{
             height: 300px;
@@ -89,6 +93,71 @@
             font-size: 16px;
             color: #333;
         }
+        @media screen and (max-width: 576px){
+            html,body{
+                min-width: auto;
+            }
+            .case-detail{
+                width: auto;
+                padding-top: 0;
+                padding-bottom: 23px;
+            }
+            .c-logo{
+                padding: 18px 0;
+            }
+            .c-logo img{
+                height: 32px;
+            }
+            .c-tit{
+                padding: 0 10px 15px;
+            }
+            .c-tit p{
+                height: 74px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+            .c-pro {
+                height: 150px;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+            .pro-tit{
+                width: 20px;
+            }
+            .pro-tit p{
+                margin: 39px 0;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .c-pro-tit{
+                width: 130px;
+                overflow: hidden;
+            }
+            .c-pro-tit img{
+                width: auto;
+                height: 150px;
+            }
+            .pro-lev {
+                width: 90px;
+                height: 50px;
+            }
+            .pro-lev h5{
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            .pro-lev p{
+                font-size: 12px;
+            }
+            .c-info {
+                width: calc(100% - 150px);
+                padding: 12px 18px;
+            }
+            .c-info p{
+                height: 126px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,50 +165,62 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark sd-nav-bg">
         <a class="navbar-brand" href="../index.html">
-            <img src="../img/logo.png" alt="logo" width="149" height="40">
+            <img src="../img/logo.png" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        产品
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_pro">
-                        <a class="dropdown-item" href="product-details.html">采集系统</a>
-                        <a class="dropdown-item" href="product-details.html">分析系统</a>
-                        <a class="dropdown-item" href="product-details.html">处理系统</a>
-                        <a class="dropdown-item" href="product-details.html">展示系统</a>
-                        <a class="dropdown-item" href="product-details.html">运维系统</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        解决方案
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_solution">
-                        <a class="dropdown-item" href="solution/electricity.html">电力</a>
-                        <a class="dropdown-item" href="solution/water.html">水务环保</a>
-                        <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
-                        <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
-                        <a class="dropdown-item" href="solution/other.html">其他</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="case-details.html">案例</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-sd.html">关于我们</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business-cooperation.html">商务合作</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="404.html">登录数道数据平台</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            产品
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_pro">
+                            <a class="dropdown-item" href="product-details.html">采集系统</a>
+                            <a class="dropdown-item" href="product-details.html">分析系统</a>
+                            <a class="dropdown-item" href="product-details.html">处理系统</a>
+                            <a class="dropdown-item" href="product-details.html">展示系统</a>
+                            <a class="dropdown-item" href="product-details.html">运维系统</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            解决方案
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_solution">
+                            <a class="dropdown-item" href="solution/electricity.html">电力</a>
+                            <a class="dropdown-item" href="solution/water.html">水务环保</a>
+                            <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
+                            <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
+                            <a class="dropdown-item" href="solution/other.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="case_details" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            案例
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="case_details">
+                            <a class="dropdown-item" href="case-details.html">案例一</a>
+                            <a class="dropdown-item" href="case-details.html">案例二</a>
+                            <a class="dropdown-item" href="case-details.html">案例三</a>
+                            <a class="dropdown-item" href="case-details.html">案例四</a>
+                            <a class="dropdown-item" href="case-details.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-sd.html">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business-cooperation.html">商务合作</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="404.html">登录数道数据平台</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 </header>
@@ -172,7 +253,7 @@
             <p>项目实施</p>
         </div>
         <div class="float-left c-pro-tit">
-            <img src="../img/c-pro1.png" alt="img">
+            <img src="../img/c-pro2.png" alt="img">
             <div class="pro-lev">
                 <h5>实施与搭建</h5>
                 <p>Implementation</p>
@@ -187,7 +268,7 @@
             <p>客户收益</p>
         </div>
         <div class="float-left c-pro-tit">
-            <img src="../img/c-pro1.png" alt="img">
+            <img src="../img/c-pro3.png" alt="img">
             <div class="pro-lev">
                 <h5>收益</h5>
                 <p>income</p>
@@ -309,9 +390,17 @@
     </footer>
 </div>
 <!--footer end-->
-
+<!--mobile footer-->
+<div class="container-fluid" id="mobile_footer">
+    <div>
+        <p>联系邮箱：haoshudao@haoshuodao.com</p>
+        <p>Copyright ©2018 All Rights Reserved. 数道 版权所有 </p>
+    </div>
+</div>
+<!--mobile footer-->
 <script rel="script" src="../lib/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
+<script rel="script" src="../navbar.js"></script>
 </body>
 </html>

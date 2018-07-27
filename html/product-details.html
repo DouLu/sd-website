@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,shrink-to-fit=no">
     <title>产品详情</title>
 
     <link rel="shortcut icon" href="sd_favicon.ico">
@@ -55,7 +55,7 @@
             content: '';
             top: 50px;
             left: 0;
-            width: 1px;
+            width: 2px;
             height: 25px;
             background-color: #108cee;
         }
@@ -147,6 +147,96 @@
         .pl-item:hover .pl-info img{
             margin-top: 40px;
         }
+        @media screen and (max-width: 576px){
+            html,body{
+                min-width: auto;
+            }
+            .basic-architecture{
+                display: none;
+            }
+            .pd-tit{
+                width: auto;
+                padding-top: 20px;
+                padding-left: 15px;
+                font-size: 14px;
+            }
+            .pd-tit:before {
+                top: 22px;
+                height: 15px;
+            }
+            .pd-platforms {
+                width: auto;
+                margin: 20px 0 40px;
+            }
+            .pl-item {
+                position: relative;
+                float: none;
+                width: 335px;
+                height: 150px;
+                margin: 0 auto 20px;
+            }
+            .pl-item>img{
+                width: auto;
+                height: 100%;
+            }
+            .pl-info{
+                top: 40px;
+            }
+            .pl-info img{
+                width: 24px;
+                height: auto;
+            }
+            .pl-info h3 {
+                margin-top: 5px;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            .pl-info p{
+                font-size: 12px;
+                text-align: center;
+            }
+            .pd-word {
+                top: auto;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                transform: translate(0,0);
+                text-align: center;
+            }
+            .pd-word h3 {
+                margin-bottom: 10px;
+                font-size: 21px;
+            }
+            .pd-word p{
+                font-size: 12px;
+            }
+            .sys-intro{
+                display: block;
+            }
+            .sys-intro p{
+                margin-bottom: 0;
+                padding-top: 10px;
+                font-size: 12px;
+            }
+
+            .pl-item.pl-hover:before{
+                background-color: rgba(16,140,238,.8);
+            }
+            .pl-item.pl-hover{
+                position: relative;
+                z-index: 9;
+                transform: scale(1.085);
+            }
+            .pl-item.pl-hover .pl-info{
+                top:0;
+            }
+            .pl-item.pl-hover .pl-info p{
+                visibility: visible;
+            }
+            .pl-item.pl-hover .pl-info img {
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -159,71 +249,82 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        产品
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_pro">
-                        <a class="dropdown-item" href="product-details.html">采集系统</a>
-                        <a class="dropdown-item" href="product-details.html">分析系统</a>
-                        <a class="dropdown-item" href="product-details.html">处理系统</a>
-                        <a class="dropdown-item" href="product-details.html">展示系统</a>
-                        <a class="dropdown-item" href="product-details.html">运维系统</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        解决方案
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_solution">
-                        <a class="dropdown-item" href="solution/electricity.html">电力</a>
-                        <a class="dropdown-item" href="solution/water.html">水务环保</a>
-                        <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
-                        <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
-                        <a class="dropdown-item" href="solution/other.html">其他</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="case-details.html">案例</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-sd.html">关于我们</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="business-cooperation.html">商务合作</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="404.html">登录数道数据平台</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            产品
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_pro">
+                            <a class="dropdown-item" href="product-details.html">采集系统</a>
+                            <a class="dropdown-item" href="product-details.html">分析系统</a>
+                            <a class="dropdown-item" href="product-details.html">处理系统</a>
+                            <a class="dropdown-item" href="product-details.html">展示系统</a>
+                            <a class="dropdown-item" href="product-details.html">运维系统</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            解决方案
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_solution">
+                            <a class="dropdown-item" href="solution/electricity.html">电力</a>
+                            <a class="dropdown-item" href="solution/water.html">水务环保</a>
+                            <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
+                            <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
+                            <a class="dropdown-item" href="solution/other.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-details.html">案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-sd.html">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business-cooperation.html">商务合作</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="404.html">登录数道数据平台</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
 <!--nav end-->
 
 <div class="pd-banner clearfix">
-    <img src="../img/pd-banner.png" alt="img">
+    <img src="../img/pd-banner.png" alt="img" class="pc-img">
+    <img src="../img/sm-pd-banner.png" alt="img" class="mobile-img">
     <div class="pd-word">
         <h3>大数据应用服务系统</h3>
         <p>针对用户痛点提供定制化的服务支撑，用数据分析提高效率</p>
     </div>
 </div>
 <div class="container-fluid">
-    <div class="pd-tit">大数据应用服务系统基本架构 </div>
-    <div class="pd-architecture">
-        <img src="../img/pd-diagram.png" alt="img">
+    <div class="basic-architecture">
+        <div class="pd-tit">大数据应用服务系统基本架构 </div>
+        <div class="pd-architecture">
+            <img src="../img/pd-diagram.png" alt="img">
+        </div>
+        <div class="pd-desc">
+            <h6>大数据应用服务系统</h6>
+            <p>数道大数据平台覆盖了企业从数据采集到数据存储，再到分析处理，最后到业务应用的全流程环节。基于您企业当前迫切的业务需求和数据现状，数道大数据平台将针对性地为您提供最合适的服务支撑。</br>
+                无论您是零基础，正准备从设备/PLC进行数据采集，然后开始对设备进行远程管控，还是已经完成了采集和存储，需要进一步针对设备进行故障诊断，生产调度（基于设备的产能和当前的健康状况）或预测性运维等等更深一层的分析和应用，数道大数据平台都能帮助您快速、便捷地实现“一站式”的部署与应用，让您“轻松上手”，在短时间内就直观感受到对业务的帮助和提升。</p>
+        </div>
     </div>
-    <div class="pd-desc">
-        <h6>大数据应用服务系统</h6>
-        <p>数道大数据平台覆盖了企业从数据采集到数据存储，再到分析处理，最后到业务应用的全流程环节。基于您企业当前迫切的业务需求和数据现状，数道大数据平台将针对性地为您提供最合适的服务支撑。</br>
+    <div class="sys-intro">
+        <div class="pd-tit">大数据应用服务系统简介</div>
+        <p>数道大数据平台覆盖了企业从数据采集到数据存储，再到分析处理，最后到业务应用的全流程环节。基于您企业当前迫切的业务需求和数据现状，数道大数据平台将针对性地为您提供最合适的服务支撑。
             无论您是零基础，正准备从设备/PLC进行数据采集，然后开始对设备进行远程管控，还是已经完成了采集和存储，需要进一步针对设备进行故障诊断，生产调度（基于设备的产能和当前的健康状况）或预测性运维等等更深一层的分析和应用，数道大数据平台都能帮助您快速、便捷地实现“一站式”的部署与应用，让您“轻松上手”，在短时间内就直观感受到对业务的帮助和提升。</p>
     </div>
     <div class="pd-tit">大数据应用服务平台包含平台</div>
     <div class="pd-platforms clearfix">
         <div class="pl-item clearfix">
-            <img src="../img/platform1.png" alt="img">
+            <img src="../img/platform1.png" alt="img" class="pc-img">
+            <img src="../img/sm-platform1.png" alt="img" class="mobile-img">
             <div class="pl-info">
                 <img src="../img/pl-icon1.png" alt="icon">
                 <h3>数据获取</h3>
@@ -234,7 +335,8 @@
             </div>
         </div>
         <div class="pl-item clearfix">
-            <img src="../img/platform2.png" alt="img">
+            <img src="../img/platform2.png" alt="img" class="pc-img">
+            <img src="../img/sm-platform2.png" alt="img" class="mobile-img">
             <div class="pl-info">
                 <img src="../img/pl-icon2.png" alt="icon">
                 <h3>数据准备</h3>
@@ -245,7 +347,8 @@
             </div>
         </div>
         <div class="pl-item clearfix">
-            <img src="../img/platform3.png" alt="img">
+            <img src="../img/platform3.png" alt="img" class="pc-img">
+            <img src="../img/sm-platform3.png" alt="img" class="mobile-img">
             <div class="pl-info">
                 <img src="../img/pl-icon3.png" alt="icon">
                 <h3>数据分析</h3>
@@ -255,7 +358,8 @@
             </div>
         </div>
         <div class="pl-item clearfix">
-            <img src="../img/platform4.png" alt="img">
+            <img src="../img/platform4.png" alt="img" class="pc-img">
+            <img src="../img/sm-platform4.png" alt="img" class="mobile-img">
             <div class="pl-info">
                 <img src="../img/pl-icon4.png" alt="icon">
                 <h3>机器学习</h3>
@@ -267,7 +371,8 @@
             </div>
         </div>
         <div class="pl-item clearfix">
-            <img src="../img/platform5.png" alt="img">
+            <img src="../img/platform5.png" alt="img" class="pc-img">
+            <img src="../img/sm-platform5.png" alt="img" class="mobile-img">
             <div class="pl-info">
                 <img src="../img/pl-icon5.png" alt="icon">
                 <h3>决策辅助</h3>
@@ -391,9 +496,57 @@
     </footer>
 </div>
 <!--footer end-->
-
+<!--mobile footer-->
+<div class="container-fluid" id="mobile_footer">
+    <div>
+        <p>联系邮箱：haoshudao@haoshuodao.com</p>
+        <p>Copyright ©2018 All Rights Reserved. 数道 版权所有 </p>
+    </div>
+</div>
+<!--mobile footer-->
 <script rel="script" src="../lib/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
+<script rel="script" src="../navbar.js"></script>
+<script rel="script">
+    window.onload = function () {
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            //监听鼠标滚动
+            $(window).scroll(function () {
+                var winPos = $(window).scrollTop();
+                var pdPos = $('.pd-platforms').offset().top;
+                var pdDis = pdPos-winPos;
+
+                if(pdDis>160 || pdDis< -20){
+                    $('.pl-item:eq(0)').removeClass('pl-hover');
+                }else{
+                    $('.pl-item:eq(0)').addClass('pl-hover');
+                }
+
+                if(pdDis > 0 || pdDis< -100){
+                    $('.pl-item:eq(1)').removeClass('pl-hover');
+                }else {
+                    $('.pl-item:eq(1)').addClass('pl-hover');
+                }
+
+                if(pdDis > -140 || pdDis< -200){
+                    $('.pl-item:eq(2)').removeClass('pl-hover');
+                }else {
+                    $('.pl-item:eq(2)').addClass('pl-hover');
+                }
+                if(pdDis > -160 || pdDis<-220){
+                    $('.pl-item:eq(3)').removeClass('pl-hover');
+                }else {
+                    $('.pl-item:eq(3)').addClass('pl-hover');
+                }
+                if(pdDis > -200){
+                    $('.pl-item:eq(4)').removeClass('pl-hover');
+                }else {
+                    $('.pl-item:eq(4)').addClass('pl-hover');
+                }
+            })
+        }
+    };
+</script>
 </body>
 </html>

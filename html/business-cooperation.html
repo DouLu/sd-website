@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,shrink-to-fit=no">
     <title>商务合作</title>
 
     <link rel="shortcut icon" href="sd_favicon.ico">
@@ -94,6 +94,67 @@
         .custom-radio .custom-control-input:checked ~ .custom-control-label::after{
             background: url(../img/radiobox1.png) no-repeat center/contain;
         }
+        @media screen and (max-width: 576px){
+            html,body{
+                min-width: auto;
+                height: 100%;
+                font-size: 12px;
+            }
+            .con-box{
+                width: 100%;
+            }
+            .sd-form{
+                width: auto;
+                box-sizing: border-box;
+                padding-left: 6px;
+                padding-right: 14px;
+                padding-bottom: 60px;
+            }
+            .con-box h3{
+                padding: 15px 0 5px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+            .sd-form label.col-form-label{
+                padding-left: 10px;
+                font-size: 12px;
+            }
+            .custom-control-label{
+                font-size: 12px;
+            }
+            .custom-control-label::after{
+                top: 8px;
+                width: 9px;
+                height: 9px;
+            }
+            .custom-control{
+                padding: 4px 10px;
+            }
+            input.form-control, #industry{
+                height: 30px;
+                line-height: 30px;
+            }
+            input::placeholder,textarea::placeholder{
+                font-size: 12px;
+            }
+            .sd-form .col-10{
+                padding-left: 12px;
+            }
+            .lowast{
+                left: 0;
+                top: -2px;
+            }
+            .mb-30{
+                margin-bottom: 15px;
+            }
+            .btn-primary{
+                width: 100%;
+                font-size: 14px;
+            }
+            .mt-5{
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,50 +162,62 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark sd-nav-bg">
         <a class="navbar-brand" href="../index.html">
-            <img src="../img/logo.png" alt="logo" width="149" height="40">
+            <img src="../img/logo.png" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        产品
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_pro">
-                        <a class="dropdown-item" href="product-details.html">采集系统</a>
-                        <a class="dropdown-item" href="product-details.html">分析系统</a>
-                        <a class="dropdown-item" href="product-details.html">处理系统</a>
-                        <a class="dropdown-item" href="product-details.html">展示系统</a>
-                        <a class="dropdown-item" href="product-details.html">运维系统</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        解决方案
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="sd_solution">
-                        <a class="dropdown-item" href="solution/electricity.html">电力</a>
-                        <a class="dropdown-item" href="solution/water.html">水务环保</a>
-                        <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
-                        <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
-                        <a class="dropdown-item" href="solution/other.html">其他</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="case-details.html">案例</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-sd.html">关于我们</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="business-cooperation.html">商务合作</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="404.html">登录数道数据平台</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_pro" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            产品
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_pro">
+                            <a class="dropdown-item" href="product-details.html">采集系统</a>
+                            <a class="dropdown-item" href="product-details.html">分析系统</a>
+                            <a class="dropdown-item" href="product-details.html">处理系统</a>
+                            <a class="dropdown-item" href="product-details.html">展示系统</a>
+                            <a class="dropdown-item" href="product-details.html">运维系统</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sd_solution" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            解决方案
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sd_solution">
+                            <a class="dropdown-item" href="solution/electricity.html">电力</a>
+                            <a class="dropdown-item" href="solution/water.html">水务环保</a>
+                            <a class="dropdown-item" href="solution/robot.html">机器人设备</a>
+                            <a class="dropdown-item" href="solution/highEnd.html">高端装备</a>
+                            <a class="dropdown-item" href="solution/other.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="case_details" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            案例
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="case_details">
+                            <a class="dropdown-item" href="case-details.html">案例一</a>
+                            <a class="dropdown-item" href="case-details.html">案例二</a>
+                            <a class="dropdown-item" href="case-details.html">案例三</a>
+                            <a class="dropdown-item" href="case-details.html">案例四</a>
+                            <a class="dropdown-item" href="case-details.html">其他</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-sd.html">关于我们</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="business-cooperation.html">商务合作</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="404.html">登录数道数据平台</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 </header>
@@ -152,32 +225,32 @@
 
 <div class="con-box">
     <h3>商务合作</h3>
-    <form class="sd-form" action="" method="">
+    <form class="sd-form needs-validation" novalidate action="" method="">
         <div class="form-group row no-gutters">
-            <label class="col-sm-2 col-form-label">咨询类型</label>
-            <div class="col-sm-10">
+            <label class="col-2 col-sm-2 col-form-label">咨询类型</label>
+            <div class="col-10 col-sm-10">
                 <div class="row" style="margin: 0;">
-                    <div class="custom-control custom-radio col-sm-2">
-                        <input type="radio" id="conType1" name="consultationType" class="custom-control-input">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
+                        <input type="radio" id="conType1" name="consultationType" class="custom-control-input" required>
                         <label class="custom-control-label" for="conType1">售前咨询</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
                         <input type="radio" id="conType2" name="consultationType" class="custom-control-input">
                         <label class="custom-control-label" for="conType2">售后咨询</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
                         <input type="radio" id="conType3" name="consultationType" class="custom-control-input">
                         <label class="custom-control-label" for="conType3">活动咨询</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
                         <input type="radio" id="conType4" name="consultationType" class="custom-control-input">
                         <label class="custom-control-label" for="conType4">产品咨询</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
                         <input type="radio" id="conType5" name="consultationType" class="custom-control-input">
                         <label class="custom-control-label" for="conType5">方案咨询</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-3 col-sm-2">
                         <input type="radio" id="conType6" name="consultationType" class="custom-control-input">
                         <label class="custom-control-label" for="conType6">合作咨询</label>
                     </div>
@@ -185,26 +258,26 @@
             </div>
         </div>
         <div class="form-group row no-gutters mb-30">
-            <label for="productType" class="col-sm-2 col-form-label">产品类型</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="productType" placeholder="请输入您需要咨询的产品，解决方案.......">
+            <label for="productType" class="col-2 col-sm-2 col-form-label">产品类型</label>
+            <div class="col-10 col-sm-10">
+                <input type="text" class="form-control" id="productType" placeholder="请输入您需要咨询的产品，解决方案......." required>
             </div>
         </div>
         <div class="form-group row no-gutters">
-            <label for="consultingContent" class="col-sm-2 col-form-label">咨询内容</label>
-            <div class="col-sm-10">
-                <textarea class="form-control" id="consultingContent" rows="6" placeholder="请简单描述您的咨询内容"></textarea>
+            <label for="consultingContent" class="col-2 col-sm-2 col-form-label">咨询内容</label>
+            <div class="col-10 col-sm-10">
+                <textarea class="form-control" id="consultingContent" rows="6" placeholder="请简单描述您的咨询内容" required></textarea>
             </div>
         </div>
         <div class="form-group row no-gutters">
-            <label class="col-sm-2 col-form-label"><span class="lowast">&lowast;</span>身份类型</label>
-            <div class="col-sm-10">
+            <label class="col-2 col-sm-2 col-form-label"><span class="lowast">&lowast;</span>身份类型</label>
+            <div class="col-10 col-sm-10">
                 <div class="row" style="margin: 0;">
-                    <div class="custom-control custom-radio col-sm-2">
-                        <input type="radio" id="identityType1" name="identityType" class="custom-control-input">
+                    <div class="custom-control custom-radio col-2 col-sm-2">
+                        <input type="radio" id="identityType1" name="identityType" class="custom-control-input" required>
                         <label class="custom-control-label" for="identityType1">企业</label>
                     </div>
-                    <div class="custom-control custom-radio col-sm-2">
+                    <div class="custom-control custom-radio col-2 col-sm-2">
                         <input type="radio" id="identityType2" name="identityType" class="custom-control-input">
                         <label class="custom-control-label" for="identityType2">个人</label>
                     </div>
@@ -212,8 +285,8 @@
             </div>
         </div>
         <div class="form-group row no-gutters mb-30">
-            <label for="industry" class="col-sm-2 col-form-label">所属行业</label>
-            <div class="col-sm-10">
+            <label for="industry" class="col-2 col-sm-2 col-form-label">所属行业</label>
+            <div class="col-10 col-sm-10">
                 <select class="form-control" id="industry">
                     <option value="0">请选择您所在的行业</option>
                     <option value="1">互联网</option>
@@ -225,21 +298,21 @@
             </div>
         </div>
         <div class="form-group row no-gutters mb-30">
-            <label for="userName" class="col-sm-2 col-form-label"><span class="lowast">&lowast;</span>真实姓名</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="userName">
+            <label for="userName" class="col-2 col-sm-2 col-form-label"><span class="lowast">&lowast;</span>真实姓名</label>
+            <div class="col-10 col-sm-10">
+                <input type="text" class="form-control" id="userName" required>
             </div>
         </div>
         <div class="form-group row no-gutters mb-30">
-            <label for="userTel" class="col-sm-2 col-form-label"><span class="lowast">&lowast;</span>手机号码</label>
-            <div class="col-sm-10">
-                <input type="tel" class="form-control" id="userTel">
+            <label for="userTel" class="col-2 col-sm-2 col-form-label"><span class="lowast">&lowast;</span>手机号码</label>
+            <div class="col-10 col-sm-10">
+                <input type="tel" class="form-control" id="userTel" required>
             </div>
         </div>
         <div class="form-group row no-gutters">
-            <label for="userEmail" class="col-sm-2 col-form-label">电子邮件</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="userEmail">
+            <label for="userEmail" class="col-2 col-sm-2 col-form-label">电子邮件</label>
+            <div class="col-10 col-sm-10">
+                <input type="email" class="form-control" id="userEmail" required>
             </div>
         </div>
 
@@ -359,8 +432,17 @@
     </footer>
 </div>
 <!--footer end-->
+<!--mobile footer-->
+<div class="container-fluid" id="mobile_footer">
+    <div>
+        <p>联系邮箱：haoshudao@haoshuodao.com</p>
+        <p>Copyright ©2018 All Rights Reserved. 数道 版权所有 </p>
+    </div>
+</div>
+<!--mobile footer-->
 <script rel="script" src="../lib/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
+<script rel="script" src="../navbar.js"></script>
 </body>
 </html>
