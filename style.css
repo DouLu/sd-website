@@ -779,6 +779,7 @@ header{
 }
 .coop-item{
     position: relative;
+    display: block;
 }
 .coop-desc{
     width: 380px;
@@ -793,7 +794,10 @@ header{
     text-align: center;
     padding-top: 5px;
 }
-.coop-item:hover .coop-info{
+.coop-item:hover{
+    text-decoration: none;
+}
+.coop-case .col-md-4:hover .coop-info{
     display: block;
 }
 .coop-info{
@@ -1045,7 +1049,7 @@ footer a:hover{
         transform: translateX(0);
         bottom: 0;
         margin: 0;
-        padding: 10px;
+        padding: 10px 10px 30px;
     }
     #pro_features .col-6 .row{
         background-color: #000;
@@ -1054,6 +1058,9 @@ footer a:hover{
     }
     #pro_features .col-6,#pro_features .col-4,#pro_features .col-8 {
         padding: 0;
+    }
+    #pro_features .feat-col:hover{
+        background: none;
     }
     #pro_features .col-6:nth-child(2n+1) .row{
         margin-right: 10px;
@@ -1152,6 +1159,9 @@ footer a:hover{
         color: #108cee;
         border: solid 1px #108cee;
     }
+    .sm-a-btn:hover{
+        text-decoration: none;
+    }
     .sm-item-show{
         position: relative;
     }
@@ -1165,8 +1175,20 @@ footer a:hover{
         background: #fff;
         transition: all .2s ease-in;
         border: 1px dashed #5E5CEA;
-        animation: rotate 2s infinite linear;
-        -webkit-animation: rotate 2s infinite linear;
+        animation: rotate 3s infinite linear;
+        -webkit-animation: rotate 3s infinite linear;
+    }
+    .sm-pro-track .list-unstyled .media:nth-child(2) .sm-item-show:before{
+        border-color: #36c5ef;
+    }
+    .sm-pro-track .list-unstyled .media:nth-child(3) .sm-item-show:before{
+        border-color: #52b8fb;
+    }
+    .sm-pro-track .list-unstyled .media:nth-child(4) .sm-item-show:before{
+        border-color: #1b9ffc;
+    }
+    .sm-pro-track .list-unstyled .media:nth-child(5) .sm-item-show:before{
+        border-color: #4ccbc9;
     }
     #pro_plan {
         display: none;
@@ -1180,6 +1202,9 @@ footer a:hover{
     .pro-plan-list .media{
         padding: 20px 0;
         border-bottom: solid 1px #e8e8e8;
+    }
+    .pro-plan-list .media:hover{
+        text-decoration: none;
     }
     .pro-plan-list .media:last-of-type{
         border: none;
@@ -1197,6 +1222,9 @@ footer a:hover{
         width: 105px;
         height: auto;
     }
+    .coop-case .col-md-4:hover .coop-info {
+        display: none;
+    }
     #coop_case {
         padding-bottom: 0;
     }
@@ -1210,6 +1238,7 @@ footer a:hover{
     .coop-desc {
         width: 340px;
         height: 133px;
+        margin: auto;
         padding: 40px;
         background: url(img/case-bg.png) no-repeat center/contain;
         font-size: 12px;
