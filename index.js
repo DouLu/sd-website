@@ -6,9 +6,10 @@
 window.onload = function () {
     // $('#sd_carousel').carousel('pause');
 
-    var topH = $('.carousel-inner').height() - 25;
-    $('#sd_carousel .carousel-indicators').css('top',topH);
-
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var topH = $('.carousel-inner').height() - 25;
+        $('#sd_carousel .carousel-indicators').css('top',topH);
+    }
     /*if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         //监听鼠标滚动
         $(window).scroll(function () {
