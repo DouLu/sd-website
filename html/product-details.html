@@ -174,13 +174,17 @@
                 width: 335px;
                 height: 150px;
                 margin: 0 auto 20px;
+                transform: scale(1.085);
+            }
+            .pl-item:before {
+                background-color: rgba(16,140,238,.8);
             }
             .pl-item>img{
                 width: auto;
                 height: 100%;
             }
             .pl-info{
-                top: 40px;
+                top: 15px;
             }
             .pl-info img{
                 width: 24px;
@@ -192,6 +196,7 @@
                 font-size: 14px;
             }
             .pl-info p{
+                visibility: visible;
                 font-size: 12px;
                 text-align: center;
             }
@@ -218,23 +223,11 @@
                 padding-top: 10px;
                 font-size: 12px;
             }
-
-            .pl-item.pl-hover:before{
-                background-color: rgba(16,140,238,.8);
+            .pl-item:hover .pl-info img {
+                margin-top: 0;
             }
-            .pl-item.pl-hover{
-                position: relative;
-                z-index: 9;
-                transform: scale(1.085);
-            }
-            .pl-item.pl-hover .pl-info{
-                top:0;
-            }
-            .pl-item.pl-hover .pl-info p{
-                visibility: visible;
-            }
-            .pl-item.pl-hover .pl-info img {
-                margin-top: 10px;
+            .pl-item:hover .pl-info {
+                top: 15px;
             }
         }
     </style>
@@ -276,8 +269,17 @@
                             <a class="dropdown-item" href="solution/other.html">其他</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="case-details.html">案例</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="case_details" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            案例
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="case_details">
+                            <a class="dropdown-item" href="case-details.html">案例一</a>
+                            <a class="dropdown-item" href="case-details.html">案例二</a>
+                            <a class="dropdown-item" href="case-details.html">案例三</a>
+                            <a class="dropdown-item" href="case-details.html">案例四</a>
+                            <a class="dropdown-item" href="case-details.html">其他</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about-sd.html">关于我们</a>
@@ -509,7 +511,7 @@
 <script rel="script" src="../lib/bootstrap4.0/dist/js/bootstrap.js"></script>
 <script rel="script" src="../navbar.js"></script>
 <script rel="script">
-    window.onload = function () {
+    /*window.onload = function () {
         if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
             //监听鼠标滚动
             $(window).scroll(function () {
@@ -546,7 +548,7 @@
                 }
             })
         }
-    };
+    };*/
 </script>
 </body>
 </html>
