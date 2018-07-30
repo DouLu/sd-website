@@ -1082,8 +1082,8 @@ footer a:hover{
         margin-bottom: 5px;
     }
     .feat-caption h3,.feat-caption p{
-        /*font-size: 12px;*/
-        font-size: 9px;
+        font-size: 12px;
+        /*font-size: 9px;*/
     }
     .pro-feat1 .mobile-img{
         width: 52px;
@@ -1251,7 +1251,7 @@ footer a:hover{
         margin-bottom: 35px;
     }
     .coop-case>div:nth-child(n+2) .coop-desc {
-        margin: 0;
+        margin: auto;
     }
     .coop-info h6 {
         font-size: 16px;
